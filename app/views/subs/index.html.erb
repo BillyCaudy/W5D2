@@ -1,0 +1,10 @@
+<h2>Index Subs</h2>
+
+<% @subs.each do |sub| %>
+    <form action="<%= sub_url(sub) %>" method="GET">
+    <%= sub.title %> <%= sub.description %>
+    <input type="submit" value="Show Sub">
+    </form>
+<% end %>
+
+<a href="<%= new_sub_url %>">Create New Sub</a>

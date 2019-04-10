@@ -1,0 +1,10 @@
+<h2>Show Sub</h2>
+<%= @sub.title %>
+<%= @sub.description%>
+<%= User.find_by(id: @sub.moderator_id).username %>
+<form action="<%= edit_sub_url(@sub)%>" method="GET">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type="submit" value="Edit Sub">
+</form>
+
+<a href="<%= subs_url %>">Index Subs</a>
